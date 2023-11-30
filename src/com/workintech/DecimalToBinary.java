@@ -1,17 +1,29 @@
 package com.workintech;
+import java.sql.SQLOutput;
+import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.Stack;
 
 public class DecimalToBinary {
+
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+         LinkedList<String> results = new LinkedList<>();
 
-        System.out.print("Decimal bir sayı girin: ");
-        int decimalNumber = scanner.nextInt();
 
-        String binaryRepresentation = convertToBinary(decimalNumber);
 
-        System.out.println("Binary karşılığı: " + binaryRepresentation);
+        String binaryRepresentation = convertToBinary(12);
+        String binaryRepresentation2 = convertToBinary(222);
+        String binaryRepresentation3= convertToBinary(232322);
+        String binaryRepresentation4 = convertToBinary(323232);
+
+        results.add(binaryRepresentation2);
+        results.add(binaryRepresentation3);
+        results.add(binaryRepresentation4);
+        results.add(binaryRepresentation);
+        results.add(binaryRepresentation);
+        System.out.println("results: "+results );
+
     }
 
     public static String convertToBinary(int decimalNumber) {
@@ -37,4 +49,5 @@ public class DecimalToBinary {
 
         return binary.toString();
     }
+
 }
